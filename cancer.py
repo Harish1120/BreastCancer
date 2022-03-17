@@ -11,6 +11,7 @@ from sklearn.model_selection import KFold, cross_val_score
 from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.ensemble import RandomForestClassifier
 from urllib.request import urlopen
+import joblib
 
 plt.style.use('ggplot')
 
@@ -326,3 +327,5 @@ def print_class_report(predictions, alg_name):
 
 
 class_report = print_class_report(predictions, 'Random Forest')
+
+joblib.dump(fit_rf,'cancer_96.pkl')
