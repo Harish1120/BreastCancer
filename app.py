@@ -59,7 +59,8 @@ def predict():
         output = 'Patient is Diagnosed with Cancer'
     return render_template('prediction.html',output = output)
 
-app.run(debug = True)
+if __name__ == "__main__":
+    app.run(debug = True)   
 
 
 
